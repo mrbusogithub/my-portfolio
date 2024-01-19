@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Link to the external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to the Font Awesome script for icons -->
+    <script
+      src="https://kit.fontawesome.com/15f37e14a0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/Javascript" src="index.js"></script>
+    <!-- To link html to javascript file for easy access of javascript code-->
+  </head>
+  <body>
+    <div class="header-section">
+      <header class="header">
+        <!-- Logo image -->
+        <img src="images/logo.png" class="logo" alt="logo" />
+
+        <!-- Navigation links -->
+        <nav>
+          <a href="#header">Home</a>
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+          <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </header>
+
+      <section id="header" class="home">
+        <div class="home-text">
+          <!-- Home section text content -->
+          <h1>
+            <span class="myft">Hi, </span>
+            <span class="myblk myft">my name is</span><br />
+            <span class="myname" style="font-size: 63px">Sonwabiso Buso</span>
+          </h1>
+          <p>
+            <span class="myblk">I am a </span><br /><span class="myname"
+              >Front-end</span
+            >
+            Developer
+          </p>
+          <div class="contactbtn">
+            <a href="#contact" id="contactbtn" class="button"
+              >Get In Touch <i class="fa-solid fa-paper-plane"></i
+            ></a>
+            <div class="scroll-down">
+              <a href="#about"
+                >Scroll down <i class="fa-solid fa-angles-down"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ------------ About section -------------- -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <!-- Column 1: User description -->
+          <div class="col-1">
+            <h1 class="sub-heading">About Me</h1>
+            <p style="margin-top: 10px">
+              <!-- User description -->
+              As a web front-end developer, I offer a unique blend of skills and
+              passion that sets me apart. I bring a diverse skill set and a
+              wealth of experience gained from working on a variety of web
+              development projects. I take pride in writing clean and precise
+              code, which not only ensures efficient functionality but also
+              facilitates easy maintenance and scalability. I am a passionate
+              person willing to learn more technologies to become a better
+              developer than I was yesterday.
+              <br />
+              <br />
+              I will love to hear from you. Whether it's a project, job
+              opportunity, or just a chat. Feel free to contact me.
+            </p>
+
+            <a href="images/SonwabisoBuso-CV.pdf" download class="button"
+              >Download CV <i class="fa-solid fa-download"></i
+            ></a>
+          </div>
+          <!-- Column 2: User details and description -->
+          <div class="col-2">
+            <h2 style="font-size: 29px">My Skills & Experience</h2>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                <!-- To create a function which will hide on click using javascript-->
+                Web Development Skills
+              </p>
+              <p class="tab-links" onclick="opentab('other-skills')">
+                Other Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><i class="fa-solid fa-circle-check"></i> HTML</li>
+                <li><i class="fa-solid fa-circle-check"></i> CSS</li>
+                <li><i class="fa-solid fa-circle-check"></i> JavaScript</li>
+                <li><i class="fa-solid fa-circle-check"></i> React</li>
+                <li><i class="fa-solid fa-circle-check"></i> SASS</li>
+                <li><i class="fa-solid fa-circle-check"></i> Bootstrap</li>
+                <li><i class="fa-solid fa-circle-check"></i> Firebase</li>
+                <li><i class="fa-solid fa-circle-check"></i> MongoDB</li>
+                <li><i class="fa-solid fa-circle-check"></i> Tailwind CSS</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="other-skills">
+              <ul>
+                <li><i class="fa-solid fa-circle-check"></i> Git</li>
+                <li><i class="fa-solid fa-circle-check"></i> GitHub</li>
+                <li><i class="fa-solid fa-circle-check"></i> Google sheets</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2023</span><br />HyperionDev <br />Full-stack web
+                  developent Bootcamp
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------ portfolio section --------------- -->
+    <section id="portfolio">
+      <div class="container">
+        <h1 class="sub-heading">My Portfolio</h1>
+        <p class="description">
+          Here you can find some of the projects that I created recently
+        </p>
+        <div class="work-list">
+          <!-- Individual work history items -->
+          <div class="list-grid">
+            <div class="work-image">
+              <div class="work-links">
+                <a
+                  href="https://web-store-app-1nn9.onrender.com"
+                  target="_blank"
+                  ><i class="fa-solid fa-clapperboard"></i> See Live</a
+                >
+                <a
+                  href="https://github.com/mrbusogithub/web-store-app.git"
+                  target="_blank"
+                  ><i class="fa-brands fa-square-github"></i> GitHub</a
+                >
+              </div>
+
+              <p>
+                <img
+                  src="images/online-store-image.png"
+                  alt="online store image"
+                />
+              </p>
+              <br />
+              <h2>E-Commerce Gym Store</h2>
+              <br />
+              <p>
+                "I developed Sports Fever, an e-commerce platform, showcasing my
+                proficiency in JavaScript. The website features robust form
+                validation, ensuring a seamless user experience. Leveraging
+                Redux, I implemented efficient global state management for
+                real-time updates of the total cart price and seamless 'Add to
+                Cart' functionality."
+              </p>
+              <br />
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Bootstrap</li>
+                <li>React</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="list-grid">
+            <div class="work-image">
+              <div class="work-links">
+                <a
+                  href="https://todolist-app-frontend.onrender.com"
+                  target="_blank"
+                  ><i class="fa-solid fa-clapperboard"></i> See Live</a
+                >
+                <a
+                  href="https://github.com/mrbusogithub/myTo-Do-app"
+                  target="_blank"
+                  ><i class="fa-brands fa-square-github"></i> GitHub</a
+                >
+              </div>
+
+              <p>
+                <img src="images/todo-image.png" alt="todo image" />
+              </p>
+              <br />
+              <h2>To-Do App</h2>
+              <br />
+              <p>
+                "I developed a full-stack to-do app that prioritizes security
+                through JWT authentication, ensuring a seamless user experience
+                with features like adding, removing, and editing tasks. The app
+                also allows users to mark items as completed for efficient task
+                management. Seamlessly integrating backend functionality with
+                frontend interactivity for an engaging To-Do experience."
+              </p>
+              <br />
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Bootstrap</li>
+                <li>Express.js</li>
+                <li>React</li>
+              </ul>
+            </div>
+          </div>
+          <div class="list-grid">
+            <div class="work-image">
+              <div class="work-links">
+                <a
+                  href="https://sage-marzipan-f5af05.netlify.app/"
+                  target="_blank"
+                  ><i class="fa-solid fa-clapperboard"></i> See Live</a
+                >
+                <a
+                  href="https://github.com/mrbusogithub/itunes-search-app"
+                  target="_blank"
+                  ><i class="fa-brands fa-square-github"></i> GitHub</a
+                >
+              </div>
+
+              <p>
+                <img
+                  src="images/iTunes-search-image.png"
+                  alt="iTunes search image"
+                />
+              </p>
+              <br />
+              <h2>iTunes Search App</h2>
+              <br />
+              <p>
+                "I developed an iTunes search app, enabling users to explore
+                their favorite artist's songs and albums. This full-stack
+                application seamlessly interacts with the iTunes Search API,
+                fetching and beautifully presenting music data for an enhanced
+                user experience."
+              </p>
+              <br />
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Bootstrap</li>
+                <li>Express.js</li>
+                <li>React</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="https://github.com/mrbusogithub" target="_blank" class="button"
+        >SEE MORE <i class="fa-solid fa-chevron-right"></i
+      ></a>
+    </section>
+
+    <!-- -------------Contact section------------------- -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title" style="font-size: 60px">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>sonwabisob@gmail.com</p>
+            <p><i class="fa-solid fa-square-phone"></i>+27 790505939</p>
+            <div class="social-icons">
+              <!-- Link to social media profile -->
+              <a
+                href="https://www.linkedin.com/in/sonwabiso-buso-72b605205"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin"></i> <span>linkedin</span></a
+              >
+            </div>
+          </div>
+          <div class="contact-right">
+            <!-- Contact form -->
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright information -->
+      <div class="copyright">
+        <p>© All rights reserved</p>
+      </div>
+    </section>
+
+    <script>
+      // Define the URL of the Google Sheets script
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbyJjON472mE2IFFCfui-7jfXJtNBvBVHY40LkjVOxGbMCB1a-WkyHIbOKZZxKKhay-Y/exec";
+
+      // Select the form and message elements
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+
+      // Add a submit event listener to the form
+      form.addEventListener("submit", (e) => {
+        // Prevent the default form submission behavior
+        e.preventDefault();
+
+        // Perform a fetch request to the Google Sheets script URL
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // Display a success message
+            msg.innerHTML = "Message sent successfully";
+
+            // Clear the success message after 5 seconds
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+
+            // Reset the form
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>

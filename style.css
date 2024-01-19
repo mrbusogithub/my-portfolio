@@ -1,0 +1,585 @@
+/* Resetting default styles and setting up some common styles */
+*{ 
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html::-webkit-scrollbar{
+    width: 1vw;
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: #778DA9;
+    border-radius: 3px;
+}
+
+html::-webkit-scrollbar-thumb:hover{
+    background-color: #55739a;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: #1f1f1f;
+}
+
+/* Global styles for the body */
+body{
+    background: #171717;
+    color: #fff; /* To make the text visible because of the dark background */
+}
+
+/* Adding smooth scrolling behavior for anchor links */
+html{
+    scroll-behavior: smooth;
+}
+
+/* -------------- header section ------------- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 5%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: #171717;
+    transition: background-color 0.4s ease-in-out;
+}
+
+header.scrolled {
+    background-color: #1f1f1f;
+    /* opacity: 0.98; */
+    box-shadow: 0px 1px 0px black;
+}
+
+.logo{
+    width: 140px;
+    height: 105px;
+}
+
+nav a {
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 35px;
+    color: #fff;
+    position: relative;
+}
+nav a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 4px; /* Adjust the thickness of the underline */
+    background-color: #778DA9;
+    bottom: -6px;
+    left: 0;
+    transition: width 0.3s ease; /* Add transition for the width property */
+}
+nav a:hover::before {
+    width: 100%;
+}
+
+nav a:hover { /* To keep the home tab active */
+    color: #778DA9
+}
+
+.header-section {
+  background-image: url(images/background.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.menu-toggle {
+    display: none; /* Initially hide the toggle button on larger screens */
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a {
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 35px;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
+
+/* --------------- home section --------------- */
+.home {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+.home-text {
+    margin-left: 50vh;
+}
+.home-text p {
+    font-size: 32px;
+    margin-top: -10px;
+}
+.home-text h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.home-text span.myname {
+    color: #778DA9;
+}
+
+span.myblk{
+    color: black;
+}
+span.myft{
+    font-size: 28px;
+}
+.contactbtn{
+    margin-left: -60%;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+}
+  
+.scroll-down i {
+    animation: bounce 2s infinite; /* Add a bounce animation to the chevron */
+}
+
+.scroll-down a {
+    text-decoration: none;
+    color: #778DA9;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+ }
+40% {
+    transform: translateY(-10px);
+ }
+    60% {
+    transform: translateY(-5px);
+ }
+}
+
+/* ---------------- About section --------------- */
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.container{
+    padding: 10px 10%;
+  }
+
+.row{
+    display: flex; /* To get the content side by side */
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+  
+.col-1{
+    flex-basis: 45%; /* This is the width of the column */
+  }
+
+.col-2{
+    flex-basis: 50%; /* To create 5% space between text and image */
+}
+.col-2 h2{
+    margin-top: 5vw;
+}
+
+/* Sub-heading in the About section */
+.sub-heading{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Styling for the list of skills and experience in the About section */
+.about-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.about-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 10px;
+}
+.about-list span {
+    color: #778DA9;
+}
+.about-list h2 {
+    margin-bottom: 10px;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px; /* To create space on the rightside */
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #778DA9;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%; /* The underline will be active half-way of the length of the word */ 
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents{
+    display: none; /* This is to hide all tab-contents */
+}
+.tab-contents.active-tab{
+    display: block; /* To make the only skills content visible */
+}
+
+/* Styles for the skills list */
+#skills ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px; /* Adjust the gap based on your preference */
+}
+  
+#skills li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+  
+#skills li i {
+    margin-right: 10px;
+    color: #778DA9;
+}
+
+#other-skills ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px; /* Adjust the gap based on your preference */
+}
+  
+#other-skills li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+  
+#other-skills li i {
+    margin-right: 10px;
+    color: #778DA9;
+}
+
+.tab-contents ul li span{
+    color: #5E748F;
+    font-size: 14px;
+  }
+
+
+
+/* ------------ Portfolio section ------------ */
+#portfolio{
+    padding: 30px 0; /* Adjusting the spacicing the the 'my work' element */
+}
+
+.description{
+    color: #ababab;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work-list h2{
+    color: #ababab;
+}
+
+.list-grid{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.work-list p span{
+    font-size: 10px;
+}
+
+.list-grid:hover{
+    transform: translateY(-10px);
+}
+
+.button{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #778DA9;
+    padding: 14px 30px; /* To create some space inside the button */
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+}
+.button:hover {
+    background: #778DA9;
+}
+
+.work-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -30px; /* Adjust as needed */
+    margin-top: -10px;
+    height: 5rem;
+}
+
+.work-links a {
+    text-decoration: none;
+    color: #778DA9;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.work-links a:hover{
+    color: #fff;
+    transition: 0.5s;
+}
+
+.work-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.list-grid ul{
+    max-width: 100%; /* Make the ul responsive to the size of its parent container */
+    overflow: hidden; /* Hide the overflow content */
+}
+
+.work-list ul{
+    display: flex;
+    flex-wrap: wrap; /* Allow the list items to wrap to the next line */
+    gap: 10px; /* Adjust the space between list items as needed */
+    list-style: none; /* Remove default list styling */
+    margin-top: 10px; /* Add some top margin for spacing */
+}
+  
+.work-list ul li{
+    background-color: #778DA9; /* Add background color for better visibility */
+    padding: 5px 10px; /* Add some padding for better aesthetics */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+}
+
+
+/* ---------------Contact section---------------- */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%; /* Also creating a 5% gap between the 2 boxes */
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{ /* To change the color, margin and size of the icons */
+    color: #778DA9;
+    margin-right: 15px;
+    font-size: 25px;
+}
+/* To change the color, size, add hover effect and move the icons up when hovering over the the social-icons */
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons span{
+    color: #fff;
+    font-size: 18px;
+}
+
+.social-icons a:hover{
+    color: #778DA9;
+    transform: translateY(-5px);
+}
+  
+/* Creating a bottun that will present the content well for download CV and submit buttons */
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #778DA9;
+    padding: 14px 50px; /* To create some space inside the button */
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+}
+.btn.btn2{
+    display: inline-block;
+    background: #171717
+}
+.btn.btn2:hover{
+    background-color: #778DA9;
+}
+/* adjusting the form display */
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+/* To adjust the size and spacing of the submit button */
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+/* To center and adjust the copyright content */
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+#msg{
+    color: #ababab;
+    margin-top: -40px;
+    display: block;
+}
+
+/* ---------------------CSS for small screens---------------- */
+@media only screen and (max-width: 828px){ /* To make it responsive to small screens */
+    .header-section{
+      background-image: url(images/small-background.png); /* To put a background image which is more responsive to small screen */
+      background-position: right; 
+      background-size: cover;
+    }
+    .home-text{
+        margin-top: 20%;
+        font-size: 12px;
+        margin-left: 10%;
+      }
+      .home-text h1{
+        font-size: 30px;
+      }
+      nav a {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+        font-size: 25px;
+    }
+    nav.show-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 10px; /* Adjust this value based on your header height */
+        left: 0;
+        width: 100%;
+        background: #171717;
+        z-index: 99;
+        transition: 0.9s ease-in-out;
+    }
+    
+    nav.show-menu a {
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        transition: top 0.9s ease-in-out;
+    }
+    nav.show-menu i {
+        margin-left: 90%;
+        transition: 0.8s ease-in-out;
+    }
+
+    #contactbtn {
+        margin-left: 40%;
+    }
+
+    .sub-heading{
+        font-size: 40px; /* To reduce the font-size on the small-screen */
+      }
+      .col-1, .col-2{
+        flex-basis: 100%; /* To adjust the size of the image */
+      }
+      .col-1{
+        margin-bottom: 30px; /* To adjust the space between image and text */
+      }
+      .col-2{
+        font-size: 14px; /* To adjust the font-size of the text to fit properly to the small screen */
+      }
+
+      #skills li {
+        width: calc(50% - 20px); /* Two items per row with some spacing */
+      }
+      .copyright {
+        width: auto;
+      }
+}
+
+
